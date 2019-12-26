@@ -6,9 +6,6 @@ public class Employee {
     private String name;
     private short age;
 
-
-    public Employee() {}
-
     public Employee(String name, short age) {
         this.name = name;
         this.age = age;
