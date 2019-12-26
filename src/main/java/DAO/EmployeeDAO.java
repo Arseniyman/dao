@@ -132,9 +132,8 @@ public class EmployeeDAO implements DAO {
     }
 
     @Override
-    public void delete(Object o) {
+    public void delete(int id) {
 
-        int id = ((Employee)o).getId();
         Connection connection = null;
         PreparedStatement prepState = null;
 
@@ -156,7 +155,7 @@ public class EmployeeDAO implements DAO {
         }
     }
 
-    private Connection getConn() throws SQLException {
+    public static Connection getConn() throws SQLException {
         return (DriverManager.getConnection("jdbc:mariadb://localhost:3306/company?user=root&password=root"));
     }
 }

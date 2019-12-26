@@ -8,5 +8,5 @@ public interface DAO<T> {
     ArrayList<T> getAll();
     void insert(T t);
     void update (T t);
-    void delete(T t);
+    void delete(int id);
 }

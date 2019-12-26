@@ -6,6 +6,7 @@ import Models.Employee;
 import Models.Task;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 
 public class App
 {
@@ -23,6 +24,11 @@ public class App
                     System.out.println(emp.getName() + " made " + tsk.getName());
                 }
             }
+        }
+        System.out.println("All employees in db:");
+        employees = employeeDAO.getAll();
+        for (Employee emp : employees) {
+            System.out.println(emp.getName());
         }
     }
 }
